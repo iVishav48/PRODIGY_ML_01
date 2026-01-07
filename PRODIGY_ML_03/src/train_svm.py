@@ -6,21 +6,18 @@ from load_data import load_image_data
 from sklearn.utils import shuffle
 
 
-# Configuration
+
 DATA_DIR = "./data/train/train"
 IMG_SIZE = 32
 
 
-# Load data
 print("Loading image data...")
 X, y = load_image_data(DATA_DIR, IMG_SIZE)
 
 
-# Shuffle data
 X, y = shuffle(X, y, random_state=42)
 
 
-# Print shapes
 print("X shape:", X.shape)
 print("y shape:", y.shape)
 
